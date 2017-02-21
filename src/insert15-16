@@ -1,0 +1,124 @@
+# Class
+insert into class values(101,'SPAN',5,3,0,0,0,1);
+insert into class values(102,'SPAN',0,6,0,0,0,1);
+insert into class values(104,'SPAN',6,0,0,0,0,1);
+insert into class values(116,'SPAN',9,0,0,0,0,1);
+insert into class values(201,'SPAN',0,9,0,0,0,1);
+insert into class values(202,'SPAN',0,6,0,0,1,0);
+insert into class values(230,'SPAN',4,0,0,0,1,0);
+insert into class values(231,'SPAN',5,5,0,1,0,0);
+insert into class values(238,'SPAN',0,3,0,0,1,0);
+insert into class values(239,'SPAN',1,0,0,0,1,0);
+insert into class values(295,'SPAN',0,1,0,1,1,0);
+insert into class values(305,'SPAN',2,2,0,1,0,0);
+insert into class values(331,'SPAN',0,1,0,1,1,0);
+insert into class values(360,'SPAN',1,1,0,1,1,0);
+insert into class values(380,'SPAN',1,1,0,1,1,0);
+insert into class values(410,'SPAN',1,1,1,0,0,0);
+
+# User
+# Faculty...
+insert into user values('Alberto Rodriguez','SPAN','rodrigua',1,0,0,1);
+insert into user values('Mark Aldrich','SPAN','aldrich',1,0,0,1);
+insert into user values('Abraham Quintanar','SPAN','quintana',1,0,0,1);
+insert into user values('Jorge Sagastume','SPAN','sagastuj',1,0,0,1);
+insert into user values('Elise Bartosik-Velez','SPAN','bartosie',1,0,0,1);
+insert into user values('Mariana Past','SPAN','pastm',1,0,1,1);
+insert into user values('Margaret Frohlich','SPAN','frohlicm',1,0,0,1);
+insert into user values('Hector Reyes Zaga','SPAN','reyeszah',1,0,0,1);
+insert into user values('Angela Delutis-Eichenberger','SPAN','delutisa',1,0,0,1);
+insert into user values('Shawn Stein','SPAN','steins',1,0,0,1);
+insert into user values('Carolina Castellanos','SPAN','castellc',1,0,0,1);
+# Visit_Adj
+insert into user values('Tina Antonicelli','SPAN','antonict',0,1,0,1);
+insert into user values('Jenni Sharkey','SPAN','sharkeyj',0,1,0,1);
+insert into user values('Asuncion Arnedo-Aldrich','SPAN','arnedoa',0,1,0,1);
+insert into user values('Julie Lesman','SPAN','lesmanj',0,1,0,1);
+insert into user values('Antonio Rivas','SPAN','rivasa',0,1,0,1);
+
+# James
+insert into user values('James Midkiff','SPAN','midkiffj',0,0,1,1);
+insert into user values('James Midkiff','COMP','midkiffj',0,0,1,1);
+insert into user values('James Midkiff','MATH','midkiffj',0,0,1,1);
+# Dick
+insert into user values('Dick Forrester','COMP','forrestr',1,0,1,1);
+insert into user values('Dick Forrester','MATH','forrestr',1,0,1,1);
+insert into user values('Dick Forrester','SPAN','forrestr',0,0,0,1);
+# Wahls
+insert into user values('Tim Wahls','COMP','wahlst',1,0,1,1);
+insert into user values('Tim Wahls','SPAN','wahlst',0,0,0,1);
+
+# Prof_Class
+insert into prof_class values(238,'arnedoa','SPAN');
+insert into prof_class values(239,'arnedoa','SPAN');
+
+# Prof_Pref
+insert into prof_pref values('rodrigua','SPAN',230,1);
+insert into prof_pref values('rodrigua','SPAN',231,2);
+insert into prof_pref values('rodrigua','SPAN',202,2);
+
+insert into prof_pref values('quintana','SPAN',116,1);
+insert into prof_pref values('quintana','SPAN',231,1);
+insert into prof_pref values('quintana','SPAN',202,2);
+
+insert into prof_pref values('sagastuj','SPAN',231,1);
+insert into prof_pref values('sagastuj','SPAN',305,1);
+insert into prof_pref values('sagastuj','SPAN',230,1);
+insert into prof_pref values('sagastuj','SPAN',331,2);
+insert into prof_pref values('sagastuj','SPAN',202,2);
+
+insert into prof_pref values('reyeszah','SPAN',230,1);
+insert into prof_pref values('reyeszah','SPAN',231,1);
+insert into prof_pref values('reyeszah','SPAN',380,1);
+insert into prof_pref values('reyeszah','SPAN',295,2);
+insert into prof_pref values('reyeszah','SPAN',231,2);
+
+insert into prof_pref values('frohlicm','SPAN',230,1);
+insert into prof_pref values('frohlicm','SPAN',380,1);
+insert into prof_pref values('frohlicm','SPAN',101,2);
+insert into prof_pref values('frohlicm','SPAN',305,2);
+
+insert into prof_pref values('delutisa','SPAN',410,1);
+insert into prof_pref values('delutisa','SPAN',104,1);
+insert into prof_pref values('delutisa','SPAN',231,2);
+insert into prof_pref values('delutisa','SPAN',230,2);
+
+insert into prof_pref values('bartosie','SPAN',410,2);
+
+# Time
+insert into time values(1,"MWF 8:30-9:20");
+insert into time values(2,"MWF 9:30-10:20");
+insert into time values(3,"MWF 10:30-11:20");
+insert into time values(4,"MWF 11:30-12:20");
+insert into time values(5,"MWF 12:30-1:20");
+insert into time values(6,"MR 1:30-2:45");
+insert into time values(7,"MR 3:00-4:15");
+insert into time values(8,"TF 1:30-2:45");
+insert into time values(9,"TF 3:00-4:15");
+insert into time values(10,"TR 9:00-10:15");
+insert into time values(11,"TR 10:30-11:45");
+insert into time values(12,"MTWRF 8:30-9:20");
+insert into time values(13,"MTWRF 9:30-10:20");
+insert into time values(14,"MTWRF 10:30-11:20");
+insert into time values(15,"MTWRF 1:30-2:20");
+insert into time values(16,"M 1:30-4:30");
+insert into time values(17,"T 1:30-4:30");
+insert into time values(18,"W 1:30-4:30");
+insert into time values(19,"R 1:30-4:30");
+insert into time values(20,"F 1:30-4:30");
+
+# Prof_Time
+insert into prof_time values('sharkeyj','SPAN',1);
+insert into prof_time values('sharkeyj','SPAN',12);
+insert into prof_time values('antonict','SPAN',1);
+insert into prof_time values('antonict','SPAN',12);
+
+# Prof_Sems
+insert into prof_sems values('pastm','SPAN',2,2);
+insert into prof_sems values('castellc','SPAN',0,1);
+insert into prof_sems values('steins','SPAN',1,2);
+
+# Dept_Year
+insert into dept_options values('SPAN',2016,2017,1);
+insert into dept_options values('MATH',2016,2017,1);
+insert into dept_options values('COMP',2016,2017,1);

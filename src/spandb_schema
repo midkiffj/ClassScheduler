@@ -1,0 +1,75 @@
+create table class (
+	num smallint(6),
+	dept varchar(5),
+	fall tinyint(1),
+	spring tinyint(1),
+	one_day tinyint(1),
+	two_day tinyint(1),
+	three_day tinyint(1),
+	five_day tinyint(1),
+	primary key (num,dept)) ENGINE=InnoDB;
+
+create table user (
+	name varchar(40),
+	dept varchar(5),
+	initials varchar(15),
+	faculty tinyint(1),
+	visit_adj tinyint(1),
+	admin tinyint(1),
+	active tinyint(1),
+	primary key (dept, initials)) ENGINE=InnoDB;
+
+create table prof_class (
+	num smallint(6),
+	initials varchar(15),
+	dept varchar(5),
+	primary key (num,initials,dept),
+	foreign key (num,dept) references class(num,dept) on delete cascade,
+	foreign key (dept,initials) references user(dept,initials) on update cascade on delete cascade) ENGINE=InnoDB;
+
+create table prof_pref (
+	initials varchar(15),
+	dept varchar(5),
+	num smallint (6),
+	sem tinyint(1),
+	primary key (initials,dept,num,sem),
+	foreign key (dept,initials) references user(dept,initials) on update cascade on delete cascade,
+	foreign key (num,dept) references class(num,dept) on delete cascade) ENGINE=InnoDB;
+
+create table time (
+	id tinyint(4),
+	time varchar(20),
+	primary key(id)) ENGINE=InnoDB;
+
+create table prof_time (
+	initials varchar(15),
+	dept varchar(5),
+	id tinyint(4),
+	primary key (initials,dept,id),
+	foreign key(dept,initials) references user(dept,initials) on update cascade on delete cascade,
+	foreign key(id) references time(id) on delete cascade) ENGINE=InnoDB;
+
+create table teaching (
+	initials varchar(15),
+	dept varchar(5),
+	num smallint(6),
+	id tinyint(4),
+	sem tinyint(1),
+	primary key(initials, dept, num, id, sem),
+	foreign key(num,dept) references class(num,dept) on delete cascade,
+	foreign key(id) references time(id) on delete cascade) ENGINE=InnoDB;
+
+create table prof_sems (
+	initials varchar(15),
+	dept varchar(5),
+	fall tinyint(1),
+	spring tinyint(1),
+	primary key(initials, dept),
+	foreign key(dept,initials) references user(dept,initials) on update cascade on delete cascade) ENGINE=InnoDB;
+
+create table dept_options (
+	dept varchar(5),
+	begin int,
+	end int,
+	pref tinyint(1),
+	primary key(dept)) ENGINE=InnoDB;
